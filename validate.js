@@ -325,8 +325,8 @@
       }
 
       // Whitespace only strings are empty
-      if (v.isString(value)) {
-        return v.EMPTY_STRING_REGEXP.test(value);
+      if (v.isString(value)|| v.isBoolean(value)) {
+        return v.EMPTY_STRING_REGEXP.test(''+value);
       }
 
       // For arrays we use the length property
