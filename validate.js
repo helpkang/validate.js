@@ -1065,7 +1065,7 @@
         throw new Error("The attribute must be a non empty string");
       }
 
-      var otherValue = v.getDeepObjectValue(attributes, options.attribute)
+      var otherValue = options.attribute
         , comparator = options.comparator || function(v1, v2) {
           return v1 === v2;
         };
