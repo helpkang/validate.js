@@ -325,8 +325,8 @@
       }
 
       // Whitespace only strings are empty
-      if (v.isString(value)|| v.isBoolean(value)) {
-        return v.EMPTY_STRING_REGEXP.test(''+value);
+      if (v.isString(value)) {
+        return v.EMPTY_STRING_REGEXP.test(value);
       }
 
       // For arrays we use the length property
@@ -1061,9 +1061,9 @@
         this.message ||
         "is not equal to %{attribute}";
 
-      if (v.isEmpty(options.attribute) || !v.isString(options.attribute)) {
-        throw new Error("The attribute must be a non empty string");
-      }
+      //if (v.isEmpty(options.attribute) || !v.isString(options.attribute)) {
+      //  throw new Error("The attribute must be a non empty string");
+      //}
 
       var otherValue = options.attribute
         , comparator = options.comparator || function(v1, v2) {
